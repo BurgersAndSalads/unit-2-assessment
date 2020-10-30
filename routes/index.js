@@ -18,4 +18,9 @@ router.post('/new', function(req, res) {
   res.redirect('/')
 })
 
+router.post('/delete/:id', function(req, res) {
+  Todo.todoList.splice(req.params.id, 1);
+  res.redirect('/');
+})
+
 module.exports = router;

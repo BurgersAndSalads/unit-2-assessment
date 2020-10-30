@@ -1,5 +1,3 @@
-const todoList = [
-    {todo: 'do a thing', done: false}
-];
+const todoList = [];
 
 module.exports = {todoList};

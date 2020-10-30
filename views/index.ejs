@@ -9,13 +9,18 @@
     <% if(todo.length == 0) { %>
       <h3>There are no To Dos yet!</h3>
     <% } else { %>
+      <% let j = 0 %>
       <ul>
         <% todo.forEach(i => { %>
           <li>
             <%= i.todo %> 
             - 
             <%= i.done ? 'Done' : 'Not Done' %>
+            <form action="/delete/<%=j%>" method="POST">
+              <button type="submit">DELETE</button>
+            </form>
           </li>
+          <% j++ %>
         <% }) %>
       </ul>
     <% } %>
